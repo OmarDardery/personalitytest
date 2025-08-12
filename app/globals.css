@@ -1,2 +1,48 @@
 @import "tailwindcss";
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
 
+.nav-btn {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #152937;
+    --button_outline_color: whitesmoke;
+    font-weight: bold;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    width: fit-content;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    padding: 0;
+
+  }
+
+  .button_top {
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.3em);
+    transition: transform 0.1s ease;
+    padding: clamp(11px, 1vw, 1vw);
+    display: flex;
+  }
+
+.nav-btn:hover .button_top {
+/* Pull the button upwards when hovered */
+transform: translateY(-0.4em);
+}
+
+.nav-btn:active .button_top {
+/* Push the button downwards when pressed */
+transform: translateY(0);
+}
+:focus{
+    outline: none;
+}

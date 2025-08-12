@@ -5,12 +5,11 @@ import "./header.css";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
-
     return (
         <>
             <menu style={menuOpen ? { transform: "translateX(0)" } : {}}></menu>
-            <div className={`cursor-pointer bg-black fixed top-0 w-full z-2 h-full transition-all duration-300 ease-in-out ${menuOpen ? "opacity-70 pointer-events-auto" : "opacity-0 pointer-events-none"}`} onClick={() => setMenuOpen(false)}></div>
-            <div className="bg-gray-800 text-white p-4 h-[12vh] flex fixed items-center justify-between text-center top-0 w-full z-10">
+            <div className={`cursor-pointer bg-black fixed top-0 w-full z-50 h-full transition-all duration-300 ease-in-out ${menuOpen ? "opacity-70 pointer-events-auto" : "opacity-0 pointer-events-none"}`} onClick={() => setMenuOpen(false)}></div>
+            <div className="bg-gray-800 text-white p-4 h-[12vh] flex fixed items-center justify-between text-center top-0 w-full z-200">
                 <div className="hamburger">
                     <input
                         className="checkbox"
