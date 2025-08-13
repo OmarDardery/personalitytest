@@ -46,3 +46,33 @@ transform: translateY(0);
 :focus{
     outline: none;
 }
+input{
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.submit-btn{
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+
+.submit-btn svg {
+    margin-right: 0.1em;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .submit-btn span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .submit-btn:hover svg {
+    transform: translateX(0.3em) rotate(90deg);
+  }
+
+  .submit-btn:hover span {
+      transform: translateX(0.45em);
+  }
