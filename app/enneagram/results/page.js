@@ -1,5 +1,6 @@
 "use client";
 import { useAppContext } from "@/app/appContextProvider";
+import EnneagramPolarChart from "@/app/enneagram/results/chart";
 import React, {useState, useEffect} from "react";
 export default function EnneagramResultsPage() {
     const {enn} = useAppContext();
@@ -13,22 +14,16 @@ export default function EnneagramResultsPage() {
 
     const [userId, setUserId] = useState("");
     return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
+        <div className="flex flex-col items-center relative justify-center h-[110vh] bg-gray-100">
             <h1 className="text-4xl font-bold mb-4">Enneagram Results</h1>
             <div className="text-lg mb-2">Your Enneagram scores are as follows:</div>
-            <ul className="list-disc pl-5">
-                {score.map((item, index) => (
-                    <li key={index} className="mb-2">
-                        Type {item.type}: {item.score}%
-                    </li>
-                ))}
-            </ul>
+            <EnneagramPolarChart score={score} />
             <div>
                 <h2>
                     Upload to database
                 </h2>
                 <input type={"text"} value={userId} onChange={(e) => {setUserId(e.target.value)}} />
-                <button className={"nav-btn submit-btn m-5"} onClick={()=>{
+                <button className={"nav-btn submit-btn m-5 mt-10 absolute bottom-0 "} onClick={()=>{
                     fetch("/api/hehe", {
                         method: "POST",
                         headers: {
