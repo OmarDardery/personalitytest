@@ -44,7 +44,7 @@ export default function EnneagramPolarChart({ score }) {
     ]
   };
 
-  return <div style={{ width: "clamp(15em, 70vw, 30em)", aspectRatio: 1 }}>
+  return <div style={{ width: "clamp(20em, 90vw, 30em)", aspectRatio: 1 }}>
       <PolarArea data={data}
                  options={{
                     responsive: true,

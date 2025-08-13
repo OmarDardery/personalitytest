@@ -14,7 +14,7 @@ export default function EnneagramResultsPage() {
 
     const [userId, setUserId] = useState("");
     return (
-        <div className="flex flex-col items-center relative justify-center h-[110vh] bg-gray-100">
+        <div className="flex flex-col items-center relative h-screen bg-gray-100">
             <h1 className="text-4xl font-bold mb-4">Enneagram Results</h1>
             <div className="text-lg mb-2">Your Enneagram scores are as follows:</div>
             <EnneagramPolarChart score={score} />
